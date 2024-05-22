@@ -1,0 +1,280 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "WorkSans-Light.ttf";
+  src: url("css/Work_Sans/static/WorkSans-Light.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  font-family: "WorkSans-Light.ttf", sans-serif;
+  font-weight: 600;
+  background-color: white;
+  color: black;
+}
+/*darkmode code*/
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.dark-mode nav ul {
+  background-color: white;
+}
+.dark-mode nav ul li a {
+  color: black;
+}
+.dark-mode nav ul li a:hover {
+  background-color: black;
+  color: white;
+}
+.dark-mode .mail {
+  color: white;
+}
+.dark-mode .links a {
+  color: white;
+}
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+.ctn-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ctn-nav span {
+  font-family: cursive;
+  position: absolute;
+  left: 10%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  background-color: black;
+  border-radius: 36px;
+  padding: 10px 30px 10px 30px;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li a:hover {
+  background-color: white;
+  border-radius: 38px;
+  padding: 3px 5px 3px 5px;
+  color: black;
+  transition: 0.2s ease-in-out;
+}
+.containeur {
+  margin-top: 100px;
+  animation-name: viewText;
+  animation-duration: 0.9s;
+}
+
+@keyframes viewText {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.containeur h1 {
+  margin-left: 10%;
+}
+
+.containeur span {
+  opacity: 0.4;
+}
+
+.sec-home-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-info {
+  width: 80%;
+}
+
+.icon-contact {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+ .dark-mode .icon{
+  box-shadow: none;
+ }
+.icon {
+  background-color: white;
+  box-shadow: 0 1px 12px rgb(213, 210, 210);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.icon img {
+  height: 30px;
+  width: 30px;
+  opacity: 0.8;
+  position: relative;
+  left: 10px;
+  top: 10px;
+}
+
+.home-info a {
+  color: black;
+}
+
+.mail img {
+  width: 15px;
+  height: 15px;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.links a {
+  color: black;
+}
+
+.links a img {
+  width: 15px;
+  height: 15px;
+}
+
+/* about */
+.containeur-pg-about {
+  margin-top: 70px;
+}
+
+.nameTitle-aboutme {
+  font-size: 1.5rem;
+}
+.nameTitle-aboutme,
+.infoTitle-aboutme {
+  text-align: center;
+}
+
+.aboutme-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.aboutme {
+  flex-basis: 25%;
+  height: 600px;
+}
+
+.aboutme img {
+  width: 100%;
+  border-radius: 7px;
+  filter: grayscale(100%);
+}
+/*mode sombre bouton*/
+.dark-mode .aboutme a input[type="button"]{
+  border:2px white solid;
+  color:white;
+}
+.aboutme a input[type="button"] {
+  padding: 10px 10px 10px 10px;
+  font-family: "WorkSans-Light.ttf", sans-serif;
+  font-weight: 600;
+  background-color: transparent;
+  border: 1px rgb(49, 49, 49) solid;
+  border-radius: 36px;
+}
+
+.content-aboutme-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.aboutme-info {
+  width: 50%;
+}
+
+.mail {
+  color: black;
+}
+
+h2 {
+  font-size: xx-large;
+}
+
+/*Fin*/
+
+@media (max-width: 868px) {
+  .ctn-nav span {
+    display: none;
+  }
+  .icon-contact {
+    gap: 10px;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+  }
+
+  .icon img {
+    height: 25px;
+    width: 25px;
+    position: relative;
+    left: -3px;
+    top: 0;
+    opacity: 0.6;
+  }
+
+  /*about*/
+  .aboutme-content {
+    flex-direction: column;
+  }
+
+  .aboutme {
+    width: 90%;
+    height: 580px;
+  }
+
+  .aboutme:nth-child(2) {
+    width: 90%;
+    height: 100%;
+  }
+
+  .containeur-pg-about {
+    display: inline-block;
+    flex-direction: column;
+  }
+
+  .aboutme-info {
+    width: 90%;
+  }
+}
